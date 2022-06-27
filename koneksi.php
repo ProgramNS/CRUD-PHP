@@ -4,7 +4,7 @@
         var $host = "localhost";
         var $username = "root";
         var $password = "";
-        var $database = "root";
+        var $database = "lab";
         var $koneksi = "";
 
         function __construct() 
@@ -25,8 +25,8 @@
             while($row = mysqli_fetch_array($data))
             {
                 $hasil[] = $row;
+                return $hasil;
             }
-            return $hasil;
         }
         
         function tambah_data($nama_barang,$stok,$harga_beli,$harga_jual)
