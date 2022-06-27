@@ -25,8 +25,8 @@
             while($row = mysqli_fetch_array($data))
             {
                 $hasil[] = $row;
-                return $hasil;
             }
+            return $hasil;
         }
         
         function tambah_data($nama_barang,$stok,$harga_beli,$harga_jual)
@@ -42,12 +42,12 @@
 
         function update_data ($nama_barang,$stok,$harga_beli,$harga_jual,$id_barang)
         {
-            $query = mysqli_query($this ->koneksi ,"update tb_barang set nama_barang='$nama_barang',stok='$stok,harga_beli='$harga_beli',harga_jual ='$harga_jual'where id_barang='$id_barang");
+            $query = mysqli_query($this ->koneksi ,"update tb_barang set nama_barang='$nama_barang',stok='$stok',harga_beli='$harga_beli',harga_jual ='$harga_jual'where id_barang='$id_barang'");
         }
 
         function delete_data($id_barang)
         {
-            $query = mysqli_query($this -> koneksi ,"delete form tb_barang where id_barang='$id_barang'");
+            $query = mysqli_query($this -> koneksi ,"delete from tb_barang where id_barang='$id_barang'");
         }
     }
     ?>

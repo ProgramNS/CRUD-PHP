@@ -1,5 +1,5 @@
 <?php
-    include("koneksi.php");
+    include('koneksi.php');
     $koneksi = new database();
 
     $action = $_GET['action'];
@@ -10,7 +10,7 @@
     }
     elseif ($action == "update")
     {
-        $koneksi->update_data($_POST['nama_barang'],$_POST['stok'],$_POST['harga_beli'],$_POST['harga_jual']);
+        $koneksi->update_data($_POST['nama_barang'],$_POST['stok'],$_POST['harga_beli'],$_POST['harga_jual'],$_POST['id_barang']);
         header("location:tampil_data.php");
     }
     elseif($action == "delete")

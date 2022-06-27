@@ -1,5 +1,5 @@
 <?php
-    include ("koneksi.php");
+    include ('koneksi.php');
     $db = new database();
     $data_barang = $db -> tampil_data();
 ?>
@@ -29,14 +29,14 @@
             {
                 ?>
             <tr>
-                <td><?php echo $no++ ?></td>
-                <td><?php echo $row['nama_barang'] ?></td>
-                <td><?php echo $row['stok'] ?></td>
-                <td><?php echo $row['harga_beli'] ?></td>
-                <td><?php echo $row['harga_jual'] ?></td>
+                <td><?php echo $no++; ?></td>
+                <td><?php echo $row['nama_barang']; ?></td>
+                <td><?php echo $row['stok']; ?></td>
+                <td><?php echo $row['harga_beli']; ?></td>
+                <td><?php echo $row['harga_jual'];?></td>
                 <td>
                     <a href="edit.php?id=<?php echo $row['id_barang'];?>"> Update</a>
-                    <a href="proses_barang.php?action=delete&id<?php echo $row['id_barang'];?>"> Delete </a>
+                    <a href="proses_barang.php?action=delete&id=<?php echo $row['id_barang'];?>"> Delete </a>
                 </td>
             </tr>
                 <?php

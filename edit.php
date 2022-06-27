@@ -1,8 +1,8 @@
 <?php
-    include("koneksi.php");
+    include('koneksi.php');
     $db = new database();
     $id_barang = $_GET['id'];
-    if(is_null($id_barang))
+    if(!is_null($id_barang))
     {
         $data_barang = $db ->get_by_id($id_barang);
     }
@@ -17,13 +17,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
 <body>
     <h3>Update Data Barang</h3>
     <hr/>
-    <form action="proses_barang.php?action=update">
-        <input type="hidden" name="id_barang" value="<?php echo $data_barang['id_barang'];?>"/>
+    <form method ="post" action="proses_barang.php?action=update">
+        <input type="hidden" name="id_barang" value="<?php echo $data_barang['id_barang'];?>">
         <table>
             <tr>
                 <td>Nama Barang</td>
